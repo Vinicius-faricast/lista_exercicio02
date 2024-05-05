@@ -212,5 +212,37 @@ const prompt = require('prompt-sync')();
 // healthyLife();
 
 /*Exercicio 09*/
+// let condition = "s";
+// const salarys = {
+//     male: 0,
+//     female: 0
+// };
+
+// const calculateSalary = (gender, salary) => {
+//     const genderInfo = gender === 'm' ? 'male' : 'female';
+
+//     salarys[genderInfo] += salary;
+//     return;
+// }
+
+// const templateInfos = () =>{
+//     console.log(`
+//     Total de salario pago aos homens: ${salarys.male}.
+//     Total de salario pago as mulheres: ${salarys.female}.
+//     `)
+// }
+
+// while (condition === "s") {
+//     const salary = parseInt(prompt(`Qual o salario do Funcionario: `));
+//     const gender = prompt(`Qual o sexo do funcionario [M/F]: `).toLowerCase();
+    
+//     calculateSalary(gender, salary);
+
+//     condition = prompt(`Deseja continuar [S/N]: `).toLowerCase();
+// }
+
+// templateInfos();
+
 /*Exercicio 10*/
 /*Exercicio 11*/
+/*Exercicio 12*/
