@@ -175,16 +175,6 @@ const prompt = require('prompt-sync')();
 // rentCar();
 
 /*Exercicio 08*/
-// . Um programa de vida saudável quer dar pontos por atividades físicas realizadas que
-// podem ser trocados por dinheiro. Cada hora de atividade física no mês vale pontos. O
-// sistema funciona assim:
-// - até 10 h de atividade no mês: ganha 2 pontos por hora
-// - de 10 h até 20 h de atividade no mês: ganha 5 pontos por hora
-// - acima de 20 h de atividade no mês: ganha 10 pontos por hora
-// - A cada ponto ganho, o cliente fatura R$ 0,05 (5 centavos)
-// Faça um programa que leia quantas horas de atividade uma pessoa teve por mês.
-// Calcule e mostre quantos pontos ela teve e quanto dinheiro ela conseguiu ganhar.
-
 // const pointPerHours = hours => {
 //     if(hours <= 10) {
 //         return hours * 2;
@@ -244,5 +234,117 @@ const prompt = require('prompt-sync')();
 // templateInfos();
 
 /*Exercicio 10*/
+// let condition = true;
+// let Numbers = {
+//     lowerNumber: 0,
+//     sumNumber: 0,
+//     mediaValues: 0,
+//     par: 0,
+//     listNumber: [],
+// };
+
+// const parValue = () => {
+//     Numbers.listNumber.forEach(element => {
+//         if(element%2 === 0){
+//             Numbers.par ++;
+//         };
+//     });
+// }
+
+// const lowerNumbers = value => {
+//     if((Numbers.lowerNumber >= value) || Numbers.listNumber.length === 1){
+//         Numbers.lowerNumber = value;
+//     };
+// };
+
+// const media = () => {
+//     const total = Numbers.sumNumber;
+//     const dividend = Numbers.listNumber.length;
+//     Numbers.mediaValues = total / dividend;
+// };
+
+// const totalAdded = () => {
+//     Numbers.sumNumber = Numbers.listNumber.reduce((acc, value) => acc + value, 0);
+// };
+
+// const addNumber = value => {
+//     Numbers.listNumber.push(value);
+//     lowerNumbers(value);
+
+// };
+
+// const textFormat = () => {
+//     console.log(`
+//     Somatório entre todos os valores: ${Numbers.sumNumber}.
+//     Menor valor digitado: ${Numbers.lowerNumber}.
+//     Média entre todos os valores: ${Numbers.mediaValues}.
+//     Quantos valores são pares: ${Numbers.par}.`)
+// }
+
+// while (condition) {
+//     const number = parseInt(prompt(`Digite um número: `));
+//     const nextNumber = prompt(`Deseja continuar [S/N]: `).toLowerCase();
+
+//     addNumber(number);
+   
+//     condition = nextNumber === 's' ? true : false;
+// }
+
+// parValue();
+// totalAdded();
+// media()
+// textFormat();
+
 /*Exercicio 11*/
+// let firstValue = parseInt(prompt(`Insira o primeiro termo: `));
+// let r = parseInt(prompt(`Insira a razão: `));
+// let PA = []
+
+// for (let index = 0; index <= 10; index++) {
+//     if(index === 0){
+//         PA.push(firstValue);
+//     }
+
+//     PA.push(PA[PA.length-1] + r);
+// }
+
+// console.log(PA.toString())
+
 /*Exercicio 12*/
+// let firstNumber = 0;
+// let secondNumber = 0;
+// let result = 0
+
+// for (let index = 0; index < 10; index++) {
+//     if(index === 0 || index === 1){
+//         firstNumber = 1;
+//         secondNumber = 1;
+
+//         console.log(firstNumber)
+
+//     }else{
+//         result = firstNumber + secondNumber;
+//         firstNumber = secondNumber;
+//         secondNumber = result;
+        
+//         console.log(result);
+
+//     };
+// };
+
+/*Exercicio 13*/
+let listNumber = []
+for (let index = 0; index < 15; index++) {
+    if(listNumber.length === 0 || listNumber.length === 1){
+        listNumber.push(1);
+    }else{
+        listNumber.push(listNumber[listNumber.length -1] + listNumber[listNumber.length-2]);
+    };
+    
+};
+
+console.log(listNumber);
+
+/*Exercicio 14*/
+/*Exercicio 15*/
+/*Exercicio 16*/
