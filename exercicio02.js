@@ -333,18 +333,68 @@ const prompt = require('prompt-sync')();
 // };
 
 /*Exercicio 13*/
-let listNumber = []
-for (let index = 0; index < 15; index++) {
-    if(listNumber.length === 0 || listNumber.length === 1){
-        listNumber.push(1);
-    }else{
-        listNumber.push(listNumber[listNumber.length -1] + listNumber[listNumber.length-2]);
-    };
+// let listNumber = []
+// for (let index = 0; index < 15; index++) {
+//     if(listNumber.length === 0 || listNumber.length === 1){
+//         listNumber.push(1);
+//     }else{
+//         listNumber.push(listNumber[listNumber.length -1] + listNumber[listNumber.length-2]);
+//     };
     
-};
+// };
 
-console.log(listNumber);
+// console.log(listNumber);
 
 /*Exercicio 14*/
+// const listName = [];
+
+// for (let index = 0; index < 7; index++) {
+//     listName[index] = prompt(`Digite um número: `);
+// }
+
+// console.log(listName.reverse());
+
 /*Exercicio 15*/
+// const listNumbers = [];
+// const listParValues = [];
+// const listIndexValue = [];
+
+// const listTemplate = (listPar, listIndex) => {
+//     listPar.forEach((element, index) => {
+//         console.log(`Elemento ${element} está no index ${listIndex[index]}`)
+//     })
+// }
+
+// const valuePar = list => {
+//     list.forEach((element, index) => {
+//         if(element%2 === 0){
+//             listParValues.push(element);
+//             listIndexValue.push(index);
+//         }
+//     })
+// }
+
+// for (let index = 0; index < 10; index++) {
+//     listNumbers[index] = parseInt(prompt(`Insira o primeiro termo: `));
+
+// }
+
+// valuePar(listNumbers);
+// listTemplate(listParValues, listIndexValue);
+
 /*Exercicio 16*/
+// Crie uma lógica que preencha um vetor de 20 posições com números aleatórios
+// (entre 0 e 99) gerados pelo computador. Logo em seguida, mostre os números gerados e
+// depois coloque o vetor em ordem crescente, mostrando no final os valores ordenados.
+
+// const listNumberRandon = [];
+
+// for (let index = 0; index < 20; index++) {
+//     listNumberRandon.push(Math.floor(Math.random()*100));
+// }
+
+// console.log(listNumberRandon.sort());
+
+/*Exercicio 17*/
+/*Exercicio 18*/
+/*Exercicio 19*/
