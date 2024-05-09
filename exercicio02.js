@@ -383,10 +383,6 @@ const prompt = require('prompt-sync')();
 // listTemplate(listParValues, listIndexValue);
 
 /*Exercicio 16*/
-// Crie uma lógica que preencha um vetor de 20 posições com números aleatórios
-// (entre 0 e 99) gerados pelo computador. Logo em seguida, mostre os números gerados e
-// depois coloque o vetor em ordem crescente, mostrando no final os valores ordenados.
-
 // const listNumberRandon = [];
 
 // for (let index = 0; index < 20; index++) {
@@ -396,5 +392,86 @@ const prompt = require('prompt-sync')();
 // console.log(listNumberRandon.sort());
 
 /*Exercicio 17*/
+// const peopleName = [];
+// const peopleAge = [];
+
+// const peopleUnderEigthteen = (listName, listAge) => {
+    
+//     listAge.forEach((age, index) => {
+//        if (age < 18) {
+//             console.log(`${listName[index]} tem ${age} anos`)
+//        } 
+//     });
+// } 
+
+// for (let index = 0; index < 9; index++) {
+//     const name = prompt(`Digite um nome: `);
+//     const age = parseInt(prompt(`Digite a idade: `));
+    
+//     peopleName.push(name);
+//     peopleAge.push(age);
+
+// }
+
+// peopleUnderEigthteen(peopleName, peopleAge);
+
 /*Exercicio 18*/
+// const worker = (name, role, salary) => {
+//     return {name, role, salary}
+// }
+
+// const nameWorker = prompt(`Digite um nome: `);
+// const roleWorker = prompt(`Digite o cargo: `);
+// const salaryWorker = parseInt(prompt(`Digite o salario: `));
+
+// const devWorker = worker(nameWorker, roleWorker, salaryWorker);
+// console.log(`
+// Funcionário
+// Nome: ${devWorker.name};
+// cargo: ${devWorker.role};
+// salário: ${devWorker.salary}.
+// `);
+
 /*Exercicio 19*/
+// Escrever um programa para ler 5 horários. Validar cada horário fornecendo através de
+// repetição. Escrever cada um deles no formato HH.MM.SS.
+
+const validateTime = (time) => {
+    const parts = time.split('.');
+    const errorMenssage = "Insira um horário valido";
+
+    if(parts.length !== 3) {
+        return false
+    };
+
+    const conditionNumberInParts = !(parts[0].length !== 2 || parts[1].length !== 2 || parts[2].length !== 2);
+    const conditionIsNumberInParts = (parseInt(parts[0])) || parseInt((parts[1])) || parseInt((parts[2]));
+    
+    if(conditionNumberInParts && conditionIsNumberInParts) {
+        return true;
+    }
+
+    return false;
+}
+
+const times = [];
+let condition = 0;
+
+while (condition < 3) {
+    const time = prompt("Insira um horário no formato HH.MM.SS:");
+
+    if(validateTime(time)){
+        times.push(time);
+        condition++;
+    }else{
+        console.log("Insira um horário valido");
+    };
+}
+
+times.forEach(element => {
+    console.log(element)
+})
+
+/*Exercicio 20*/
+/*Exercicio 21*/
+/*Exercicio 22*/
