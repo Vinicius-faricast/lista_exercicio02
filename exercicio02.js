@@ -436,42 +436,171 @@ const prompt = require('prompt-sync')();
 // Escrever um programa para ler 5 horários. Validar cada horário fornecendo através de
 // repetição. Escrever cada um deles no formato HH.MM.SS.
 
-const validateTime = (time) => {
-    const parts = time.split('.');
-    const errorMenssage = "Insira um horário valido";
+// const validateTime = (time) => {
+//     const parts = time.split('.');
+//     const errorMenssage = "Insira um horário valido";
 
-    if(parts.length !== 3) {
-        return false
-    };
+//     if(parts.length !== 3) {
+//         return false
+//     };
 
-    const conditionNumberInParts = !(parts[0].length !== 2 || parts[1].length !== 2 || parts[2].length !== 2);
-    const conditionIsNumberInParts = (parseInt(parts[0])) || parseInt((parts[1])) || parseInt((parts[2]));
+//     const conditionNumberInParts = !(parts[0].length !== 2 || parts[1].length !== 2 || parts[2].length !== 2);
+//     const conditionIsNumberInParts = (parseInt(parts[0])) || parseInt((parts[1])) || parseInt((parts[2]));
     
-    if(conditionNumberInParts && conditionIsNumberInParts) {
-        return true;
-    }
+//     if(conditionNumberInParts && conditionIsNumberInParts) {
+//         return true;
+//     }
 
-    return false;
-}
+//     return false;
+// }
 
-const times = [];
-let condition = 0;
+// const times = [];
+// let condition = 0;
 
-while (condition < 3) {
-    const time = prompt("Insira um horário no formato HH.MM.SS:");
+// while (condition < 3) {
+//     const time = prompt("Insira um horário no formato HH.MM.SS:");
 
-    if(validateTime(time)){
-        times.push(time);
-        condition++;
-    }else{
-        console.log("Insira um horário valido");
-    };
-}
+//     if(validateTime(time)){
+//         times.push(time);
+//         condition++;
+//     }else{
+//         console.log("Insira um horário valido");
+//     };
+// }
 
-times.forEach(element => {
-    console.log(element)
-})
+// times.forEach(element => {
+//     console.log(element)
+// })
 
 /*Exercicio 20*/
+// const workers = [
+//     {
+//         registration: 1,
+//         Name: 'José',
+//         grossSalary: 2000,
+//         INSS: 0.12,
+//         netSalary: 1.760, 
+//     },
+//     {
+//         registration: 2,
+//         Name: 'Maria',
+//         grossSalary: 3000,
+//         INSS: 0.12,
+//         netSalary: 2.640, 
+//     },
+//     {
+//         registration: 3,
+//         Name: 'Pedro',
+//         grossSalary: 1550,
+//         INSS: 0.12,
+//         netSalary: 1.364, 
+//     }
+// ];
+
+// const readerTableWorkers = table => {
+//     table.forEach(({registration, Name, grossSalary, INSS, netSalary}) => {
+//         console.log(`
+// Matrícula: ${registration}
+// Nome: ${Name}
+// Salário bruto: ${grossSalary}
+// Dedução INSS: ${INSS}
+// Salário líquido: ${netSalary}
+// -----------------------`)
+//     });
+// }
+// readerTableWorkers(workers)
+
 /*Exercicio 21*/
+// Faça uma função que recebe, por parâmetro, a altura (alt) e o sexo de uma pessoa e
+// retorna o seu peso ideal. Para homens, calcular o peso ideal usando a fórmula: peso ideal
+// = 72.7 x alt - 58 e, para mulheres, peso ideal = 62.1 x alt - 44.7.
+
+// const idealWeight = (heigth, gender) => {
+//     const result = gender === 'm' ? (72.7 * heigth) - 58 : (62.1 * heigth) - 44.7;
+//     return `Seu peso ideal é ${result.toFixed(2)} kg`
+// }
+
+// const heigth = Number(prompt("Insira sua altura: "));
+// const gender = prompt("Insira seu sexo[m/f]: ").toLowerCase();
+
+// console.log(idealWeight(heigth, gender));
+
 /*Exercicio 22*/
+// const listpeoples = [];
+
+// const peoplesInfos = (salary, childrens) => {
+//     return {
+//         salary,
+//         childrens
+//     };
+// };
+
+// const mediaSalary = peoples => {
+//     let numberPeoples = 0;
+//     let salaryTotal = 0;
+
+//     peoples.forEach(({salary, childrens}) => {
+//         numberPeoples += 1 + childrens;
+//         salaryTotal += salary;
+//     });
+
+//     const averageWage = salaryTotal / numberPeoples;
+//     return averageWage
+// }
+
+// const mediaChildrens = peoples => {
+//     let numberChildrens = 0;
+//     peoples.forEach(({childrens}) => {
+//         numberChildrens += childrens;
+//     });
+
+//     const media = numberChildrens !== 0 ? numberChildrens / peoples.length : 0;
+//     return media;
+// }
+
+// const highestSalary = peoples => {
+//     let hightSal = 0;
+
+//     peoples.forEach(({salary}) => {
+//         if(salary > hightSal){
+//             hightSal = salary
+//         }
+//     })
+
+//     return hightSal;
+// }
+
+// const salaryUpTo350 = people => {
+//     let sal350 = 0;
+
+//     people.forEach(({salary}) => {
+//         if(salary <= 350){
+//             sal350++
+//         }
+//     })
+
+//     const result = sal350 !== 0 ? (sal350*100) / people.length : 0;
+//     return result;
+// }
+
+// const readerInfos = () => {
+//     let condition = 's'
+//     while(condition === 's') {
+//         const salary = Number(prompt("Qual o valor do salário: "));
+//         const children = Number(prompt('Qual o número de filhos: '));
+
+//         listpeoples.push(peoplesInfos(salary, children));
+//         condition = prompt("Deseja continuar[s/n]: ").toLowerCase();
+//     }
+// }
+
+// readerInfos();
+
+// console.log(`Media salarial: ${mediaSalary(listpeoples)}`)
+// console.log(`Media de filhos: ${mediaChildrens(listpeoples)}`)
+// console.log(`Maior salário: ${highestSalary(listpeoples)}`)
+// console.log(`Porcentagem de pessoas que recebem até 350,00: ${salaryUpTo350(listpeoples).toFixed(2)}%`);
+
+/*Exercicio 23*/
+/*Exercicio 24*/
+/*Exercicio 25*/
