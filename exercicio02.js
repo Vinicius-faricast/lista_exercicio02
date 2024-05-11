@@ -602,5 +602,94 @@ const prompt = require('prompt-sync')();
 // console.log(`Porcentagem de pessoas que recebem até 350,00: ${salaryUpTo350(listpeoples).toFixed(2)}%`);
 
 /*Exercicio 23*/
+// const mi = [];
+
+// for (let i = 0; i < 7; i++) {
+//     const row = [];
+//     for (let j = 0; j < 7; j++) {
+//         if (i === j) { 
+//             row.push(1);
+//         } else {
+//             row.push(null);
+//         }
+//     }
+//     mi.push(row);
+// }
+
+// console.log(mi);
+
 /*Exercicio 24*/
+// const createMi = () => {
+//     const mi = [];
+//     for (let i = 0 ; i < 6 ; i++) {
+//         const row = [];
+//         for(let j = 0; j < 8; j++) {
+//             const numberGenerator = Math.floor(Math.random() * (10 - (-10 + 1)) + (-10));
+//             row.push(numberGenerator)
+//         }
+//         mi.push(row); 
+//     }
+//     return mi;
+// }
+
+// const createVectoNegativeNumber = () => {
+//     const c = [];
+
+//     mi.forEach(element => {
+//         element.forEach( number => {
+//             if(number < 0) c.push(number) 
+//         })
+//     })
+
+//     return c;
+// }
+
+// const mi = createMi()
+// const c = createVectoNegativeNumber();
+
+
+// console.log(c);
+
 /*Exercicio 25*/
+// const createMi = () => {
+//     const mi = [];
+//     for(let i = 0; i < 15; i++){
+    
+//         const row = [];
+//         for (let j = 0; j < 20; j++) {
+//             const randomNumber = Number((Math.random()*10).toFixed(2));
+//             row.push(randomNumber);
+//         }
+//         mi.push(row);
+//     }
+//     return mi;
+// }
+
+
+// const sumColuns = matriz => {
+//     let currentValue = [];
+
+//     matriz.forEach((element) => {
+//         for (let index = 0; index < element.length; index++) {
+//             currentValue[index] = currentValue[index] 
+//             ? (currentValue[index] + element[index]) 
+//             : (element[index]);
+//         };
+//     });
+
+//     return currentValue;
+// }
+
+// const formatTemplate = list => {
+//     list.forEach((value, index) => {
+//         console.log(`O valor da soma da coluna ${index + 1} é ${value.toFixed(2)}`);
+//     })
+// }
+
+// const mi = createMi();
+// const currentValue = sumColuns(mi);
+// console.log(formatTemplate(currentValue));
+
+/*Exercicio 26*/
+/*Exercicio 27*/
+/*Exercicio 28*/
