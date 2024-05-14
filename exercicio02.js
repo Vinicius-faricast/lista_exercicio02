@@ -691,5 +691,43 @@ const prompt = require('prompt-sync')();
 // console.log(formatTemplate(currentValue));
 
 /*Exercicio 26*/
+// const createMi = () => {
+//     const mi = [];
+//     for(let i = 0; i < 3; i++){
+    
+//         const row = [];
+//         for (let j = 0; j < 15; j++) {
+//             const randomNumber = Math.floor(Math.random()*10);
+//             row.push(randomNumber);
+//         }
+//         mi.push(row);
+//     }
+//     return mi;
+// }
+
+// const multipleMatriz = (mA, mB) => {
+//     const mP = [];
+//     if ((mA.length === matrizB.length) && (mA[0].length === mB[0].length) ) {
+        
+//         mA.forEach((list, indexRow) => {
+//             const row = [];
+//             list.forEach((element, indexColunm) => {
+//                 row.push(element*mB[indexRow][indexColunm])
+//             })
+//             mP.push(row);
+//         })
+//     }
+
+//     return mP;
+// }
+    
+// const matrizA = createMi();
+
+// const matrizB = createMi();
+
+// const matrizP = multipleMatriz(matrizA, matrizB);
+
+// console.log(matrizP);
+
 /*Exercicio 27*/
 /*Exercicio 28*/
