@@ -730,4 +730,148 @@ const prompt = require('prompt-sync')();
 // console.log(matrizP);
 
 /*Exercicio 27*/
+// const createMatriz = () => {
+//     const matrizM = [];
+//     for (let index = 0; index < 6; index++) {
+//         const row = []
+//         for (let j = 0; j < 6; j++) {
+//             const value = Number(prompt("Digite um valor: "));
+//             row.push(value)
+//         }
+//         matrizM.push(row) 
+//     }
+//     return matrizM;
+// };
+
+// const multiplaM = (matriz, value ) => {
+//     const matrizV = []
+//     matriz.forEach(row => {
+//         row.forEach(element => {
+//             matrizV.push(element*value);
+//         });
+//     });
+
+//     return matrizV;
+// }
+
+// const matrizM = createMatriz();
+// const value = Number(prompt("Digite um valor para multiplicar a matriz: "));
+// const matrizV = multiplaM(matrizM, value);
+
+// console.log(matrizM);
+// console.log(matrizV);
+
+
 /*Exercicio 28*/
+// const createMatriz = () => {
+//     const matrizM = [];
+//     for (let index = 0; index < 10; index++) {
+//         const row = []
+//         for (let j = 0; j < 10; j++) {
+//             const value = Number(prompt("Digite um valor: "));
+//             row.push(value)
+//         }
+//         matrizM.push(row) 
+//     }
+//     return matrizM;
+// };
+
+// const upperDiagonalSum = (matriz) => {
+//     let valueSum = 0;
+//     matriz.forEach((row, indexRow) => {
+//         row.forEach((colunm , indexColumn) => {
+//             if(indexColumn > indexRow){
+//                 console.log(colunm)
+//                 valueSum += colunm;
+//             };
+//         });
+//     });
+//     return valueSum;
+// }
+
+// const downDiagonalSum = (matriz) => {
+//     let valueSum = 0;
+//     matriz.forEach((row, indexRow) => {
+//         row.forEach((colunm , indexColumn) => {
+//             if(indexColumn < indexRow){
+//                 valueSum += colunm;
+//             };
+//         });
+//     });
+//     return valueSum;
+// }
+
+// const matrizM = createMatriz();
+
+// const upperValueSum = upperDiagonalSum(matrizM);
+// const downValueSum = downDiagonalSum(matrizM);
+
+// console.log(`Soma diagonal superior ${upperValueSum}`);
+// console.log(`Soma diagonal inferior ${downValueSum}`);
+
+/*Exercicio 29*/
+// const createMatriz = () => {
+//     const matrizM = [];
+//     for (let index = 0; index < 5; index++) {
+//         const row = []
+//         for (let j = 0; j < 5; j++) {
+//             const value = Number(prompt("Digite um valor: "));
+//             row.push(value)
+//         }
+//         matrizM.push(row) 
+//     }
+//     return matrizM;
+// };
+
+// const sumFourLine = matriz => {
+//     let sum = 0;
+//     matriz[3].forEach(item => {
+//         sum += item;
+//     })
+//     return sum;
+// }
+
+// const sumColunmTwo = matriz => {
+//     let sum = 0;
+//     matriz.forEach(row => {
+//         sum += row[1];
+//     });
+//     return sum;
+// }
+
+// const mainDiagonalSum = (matriz) => {
+//     let sum = 0;
+//     matriz.forEach((row, indexRow) => {
+//         row.forEach((colunm, indexColunm) =>{
+//             sum += indexColunm === indexRow && colunm;
+//         });
+//     });
+//     return sum;
+// };
+
+// const sumTotal = matriz => {
+//     let sum = 0;
+//     matriz.forEach(row => {
+//         row.forEach(item => {
+//             sum += item;
+//         });
+//     });
+//     return sum;
+// };
+
+// const matrizM = createMatriz();
+
+// const valueSumDiagonal = mainDiagonalSum(matrizM);
+// const valueSumFourLine = sumFourLine(matrizM);
+// const valueSumColunmTwo = sumColunmTwo(matrizM);
+// const valueSumTotal = sumTotal(matrizM);
+
+// console.log(`Soma da linha 4: ${valueSumFourLine}`);
+// console.log(`Soma da coluna 2: ${valueSumColunmTwo}`);
+// console.log(`Soma da diagonal principal: ${valueSumDiagonal}`);
+// console.log(`Soma total: ${valueSumTotal}`);
+// console.log(matrizM);
+
+/*Exercicio 30*/
+/*Exercicio 31*/
+/*Exercicio 32*/
