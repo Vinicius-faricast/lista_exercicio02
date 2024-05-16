@@ -873,5 +873,41 @@ const prompt = require('prompt-sync')();
 // console.log(matrizM);
 
 /*Exercicio 30*/
+// const createMatriz = () => {
+//     const matrizM = [];
+//     for (let index = 0; index < 5; index++) {
+//         const row = []
+//         for (let j = 0; j < 5; j++) {
+//             const value = Number(prompt("Digite um valor: "));
+//             row.push(value)
+//         }
+//         matrizM.push(row) 
+//     }
+//     return matrizM;
+// };
+
+// const sumFifthLine = matriz => {
+//     let sum = 0
+//     matriz[4].forEach(element => {
+//         sum += element;
+//     });
+//     return sum;
+// }
+
+// const sumFifthColunm = matriz => {
+//     let sum = 0;
+//     matriz.forEach((row) => {
+//         row.forEach((element, index) => {
+//             sum += index === (row.length-1) ? element : 0;
+//         });
+//     });
+//     return sum;
+// }
+
+// const matrizM = createMatriz();
+// console.log(sumFifthLine(matrizM));
+// console.log(sumFifthColunm(matrizM));
+
 /*Exercicio 31*/
 /*Exercicio 32*/
+/*Exercicio 33*/
