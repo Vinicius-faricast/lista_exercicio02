@@ -909,5 +909,120 @@ const prompt = require('prompt-sync')();
 // console.log(sumFifthColunm(matrizM));
 
 /*Exercicio 31*/
+// const createMatriz = () => {
+//     const matrizM = [];
+//     for (let index = 0; index < 30; index++) {
+//         const row = []
+//         for (let j = 0; j < 30; j++) {
+//             const value = parseInt(prompt("Digite um valor: "));
+//             row.push(value)
+//         }
+//         matrizM.push(row) 
+//     }
+//     return matrizM;
+// };
+
+// const countValue = (value, matriz) => {
+//     let count = 0;
+//     matriz.forEach(row => {
+//         row.forEach(element => {
+//             count += element === value && 1;
+//         });
+//     });
+//     return count;
+// };
+
+// const newMatriz = (value, matriz) => {
+//     const matrizV = [];
+//     matriz.forEach(row => {
+//         const line = []
+//         row.forEach(element => {
+//             if (element !== value) {
+//                 line.push(element)
+//             };
+//         });
+//         matrizV.push(line)
+//     })
+//     return matrizV;
+// }
+
+// const number = parseInt(prompt('Digite um numero: '))
+// const matrizM = createMatriz()
+// const count = countValue(number, matrizM);
+// const matrizV = newMatriz(number, matrizM);
+
+// console.log(count);
+// console.log(matrizV);
+// console.log(matrizM)
+
 /*Exercicio 32*/
+// const createMatriz = () => {
+//     const matrizM = [];
+//     for (let index = 0; index < 12; index++) {
+//         const row = []
+//         for (let j = 0; j < 13; j++) {
+//             const value = parseInt(prompt("Digite um valor: "));
+//             row.push(value)
+//         }
+//         matrizM.push(row) 
+//     }
+//     return matrizM;
+// };
+
+// const newMatriz = (matriz) => {
+//     const matrizV = [];
+//     matriz.forEach(row => {
+//         const maxNumber = Math.abs(Math.max(...row));
+//         const line = []
+//         row.forEach(element => {
+//             line.push(element/maxNumber);
+//         });
+//         matrizV.push(line);
+//     });
+//     return matrizV
+// }
+
+// const matrizM = createMatriz();
+
+// console.log(newMatriz(matrizM));
+// console.log(matrizM);
+
 /*Exercicio 33*/
+// const createMatriz = () => {
+//     const matrizM = [];
+//     for (let index = 0; index < 3; index++) {
+//         const row = []
+//         for (let j = 0; j < 3; j++) {
+//             const value = parseInt(prompt("Digite um valor: "));
+//             row.push(value)
+//         }
+//         matrizM.push(row) 
+//     }
+//     return matrizM;
+// };
+
+// const multipleMainDiagonal = matriz => {
+//     const multiplier = secundaryDiagonal(matriz)
+//     matriz.forEach((row, index) => {
+//         row.forEach((element, indexColumn) => {
+//             if(index === indexColumn){
+//                 console.log(multiplier * element);
+//             };
+//         });
+//     });
+// };
+
+// const secundaryDiagonal = matriz => {
+//     let media = 0
+//     matriz.forEach((row, index) => {
+//         row.forEach((element, indexColumn) => {
+//             if((index + indexColumn) === (row.length - 1)){
+//                 media += element;
+//             };
+//         });
+//     });
+//     return media/matriz.length;
+// };
+
+// const matrizM = createMatriz();
+// console.log(multipleMainDiagonal(matrizM));
