@@ -1026,3 +1026,105 @@ const prompt = require('prompt-sync')();
 
 // const matrizM = createMatriz();
 // console.log(multipleMainDiagonal(matrizM));
+
+/*Exercicio 34*/
+// const createMatriz = () => {
+//     const matrizM = [];
+//     for (let index = 0; index < 50; index++) {
+//         const row = []
+//         for (let j = 0; j < 50; j++) {
+//             const value = parseInt(prompt("Digite um valor: "));
+//             row.push(value)
+//         }
+//         matrizM.push(row) 
+//     }
+//     return matrizM;
+// };
+
+// const matrizM = createMatriz();
+
+// const newMatrixM = matrizM.map((row, index) => {
+//     const multiplationElement = row[index];
+//     return row.map((elemet) => {
+//         return (elemet * multiplationElement);
+//     });
+// });
+
+// console.log(newMatrixM);
+
+/*Exercicio 35*/
+// const vectorOdd = [];
+// const vectorEven = [];
+
+// const addVector = (value, vector) => {
+//     if (vector.length < 5) {
+//         vector.push(value);
+//     } else {
+//         console.log(vector);
+//         vector.shift()
+//         vector.push(value);
+//     }
+//     return vector;
+// }
+
+// for (let index = 0; index < 30; index++) {
+//     const value = parseInt(prompt("Digite um valor: "));
+//     if(value%2 === 0){
+//         addVector(value, vectorOdd);
+//     }else{
+//         addVector(value, vectorEven);
+//     };
+// };
+
+// console.log(vectorOdd);
+// console.log(vectorEven);
+
+/*Exercicio 36*/
+// const Createresponse = () => {
+//     const response = [];
+//     for (let index = 0; index < 13; index++) {
+//         response.push(parseInt(prompt(`Digite o numero da respota n° ${index + 1}: `)));
+//     }
+//     return response
+// };
+
+// const createPunter = (numberCard, responseUser) => {
+//     return {
+//         numberCard,
+//         responseUser
+//     }
+// }
+
+// const createListBettors = () => {
+
+//     const bettors = [];
+    
+//     for (let index = 0; index < 100; index++) {
+//         const numberCard = parseInt(prompt("Digite o número do cartão: "));
+//         const responseCard = []
+//         for (let index = 0; index < 13; index++) {
+//             responseCard.push(parseInt(prompt(`Digite seu palpite numero ${index+1}: `)));
+//         }
+        
+//         bettors.push(createPunter(numberCard, responseCard))
+//     }
+    
+//     return bettors;
+// }
+
+// const userWinner = (list, response) => {
+//     let count = 0
+//     list.forEach(({numberCard, responseUser}) => {
+//         responseUser.forEach((item, index) => {
+//             count += item === response[index] && 1;
+//         });
+//         const messageSucess = count === response.length ? 'Parabéns, tu foi o GANHADOR' : '';
+//         console.log(`O participante n°${numberCard} acertou ${count} numeros. ${messageSucess}`)
+//     });
+// }
+
+// const response = Createresponse();
+// const bettorsList = createListBettors();
+// userWinner(bettorsList, response);
+
+/*Exercicio 37*/
