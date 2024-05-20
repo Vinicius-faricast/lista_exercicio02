@@ -1128,3 +1128,100 @@ const prompt = require('prompt-sync')();
 // userWinner(bettorsList, response);
 
 /*Exercicio 37*/
+// const createCorrectResponse = () => {
+//     const correctList = [];
+//     for (let index = 0; index < 20; index++) {
+//         const correctAlternative = prompt(`Digite a resposta da questão ${index+1}: `).toLowerCase();
+//         correctList.push(correctAlternative);
+//     };
+//     return correctList;
+// };
+
+// const userResponse = (correctList) => {
+//     const listResponseUser = []
+//     let count = 0;
+//     for(let i = 0; i < 20; i++){
+//         const alternativeResponse = prompt("Digite a opção da alternativa: ").toLowerCase();
+//         listResponseUser.push(alternativeResponse);
+//     };
+
+//     correctList.forEach((element, index) => {
+//         console.log(count)
+//         count = element === listResponseUser[index] ? count + 1 : count + 0;
+//     });
+
+//     const sucessOrNot = count >= 20 ? 'APROVADO' : 'REPROVADO' 
+
+//     console.log(`Número de questões certas: ${count}. ${sucessOrNot}!`)
+// };
+
+
+// const AwnserList = createCorrectResponse()
+// for (let index = 0; index < 50; index++) {
+//     userResponse(AwnserList);
+// };
+
+/*Exercicio 38*/
+// const calcOrder = (a, b) => {
+//     if (a > b) {
+//       return 1;
+//     }
+//     if (a < b) {
+//       return -1;
+//     }
+//     return 0;
+// }
+
+// const calculator = {
+//     1: (vector) => vector.reduce((acc, currentValue) => acc + currentValue, 0),
+
+//     2: (vector) => vector.reduce((acc, currentValue) => acc * currentValue, 1),
+
+//     3: (vector) => (vector.reduce((acc, currentValue) => acc + currentValue, 0))/vector.length,
+
+//     4: (vector) => {
+//         const a = [...vector]
+//         a.sort(calcOrder);
+//         return a;
+//     },
+
+//     5: (vector) => vector
+// };
+
+// const createVector = () => {
+//     const vector =[]
+//     for (let index = 0; index < 3; index++) {
+//         vector.push(parseInt(prompt(`Digite o nº${index} número inteiro do vector: `)));
+//     };
+//     return vector;
+// }
+
+
+// const vector = createVector();
+// const option = prompt(`
+// 1- somadoselementos;
+// 2- produto dos elementos;
+// 3- média doselementos;
+// 4- ordene os elementos em ordemcrescente;
+// 5- mostre o vetor.
+// Digite a opção desejada:
+// `);
+// console.log(calculator[option](vector));
+
+/*Exercicio 39*/
+/*Exercicio 40*/
+/*Exercicio 41*/
+
+/*Exercicio 42*/
+
+/*Exercicio 43*/
+/*Exercicio 44*/
+/*Exercicio 45*/
+
+/*Exercicio 46*/
+
+/*Exercicio 47*/
+/*Exercicio 48*/
+/*Exercicio 49*/
+
+/*Exercicio 50*/
