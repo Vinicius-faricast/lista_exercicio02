@@ -1287,6 +1287,26 @@ const prompt = require('prompt-sync')();
 // console.log(people.email);
 
 /*Exercicio 42*/
+// const date = {
+//     dateString: 'uma string',
+//     dateNumber: 2,
+//     dateArray: [1, 2, 3, 4],
+//     secondDateString: 'outra string',
+//     secondDateArray: [1, 2, 3, 4],
+// }
+
+// const onlyVector = ({...date}) => {
+//     const object = {}
+//     for (const key in date){
+//         if(Array.isArray(date[key])){
+//             object[key] = date[key];
+//         };
+//     };
+//     return object;
+// }
+
+// const dateArray = onlyVector(date);
+// console.log(dateArray);
 
 /*Exercicio 43*/
 /*Exercicio 44*/
