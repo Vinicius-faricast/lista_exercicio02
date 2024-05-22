@@ -1209,8 +1209,82 @@ const prompt = require('prompt-sync')();
 // console.log(calculator[option](vector));
 
 /*Exercicio 39*/
+// const createrVector = () => {
+//     const response = [];
+//     for (let index = 0; index < 100; index++) {
+//         response.push(prompt(`Digite o item n°${index + 1}: `));
+//     }
+//     return response
+// };
+
+// const compactVector = (vector) => {
+//     const vectorB = [...vector];
+
+//     const verify = (value) => {
+//         if(!(value < 0) && value){
+//             return value;
+//         }
+//     }
+
+//     return vectorB.filter(verify);
+// }
+
+// const vectorA = createrVector();
+
+// const vectorV = compactVector(vectorA);
+
+// console.log(vectorV);
+
 /*Exercicio 40*/
+// const createrAwserLoto = () => {
+//     const response = [];
+//     for (let index = 0; index < 5; index++) {
+//         response.push(parseInt(prompt(`Digite a reposta do n°${index + 1}: `)));
+//     }
+//     return response
+// };
+// const createAwnserUser = () => {
+//     const response = [];
+//     for (let index = 0; index < 5; index++) {
+//         response.push(parseInt(prompt(`Digite o palpite do n°${index + 1}: `)));
+//     };
+//     return response;
+// }
+
+// const verifyAwsers = (awserCorrectList, userList) => {
+//     let count = 0;
+//     userList.forEach((value, index) => {
+//         count += value === awserCorrectList[index] && 1; 
+//     });
+//     if(count === awserCorrectList.length){
+//         console.log("GANHADOR")
+//     }else{
+//         console.log('Hoje não!')
+//     };
+// }
+
+// const app = (awserCorrectList) => {
+//     for (let index = 0; index < 50; index++) {
+//         const responseUser = createAwnserUser();
+//         verifyAwsers(awserCorrectList, responseUser);
+//     }
+// }
+
+// const awserLoto = createrAwserLoto();
+
+// app(awserLoto);
+
 /*Exercicio 41*/
+// const people = {
+//     name: 'Fulano',
+//     age: '42'
+// };
+
+// console.log(people.age);
+
+// people['email'] = 'fulano42@email.com';
+
+// console.log(people.email);
 
 /*Exercicio 42*/
 
