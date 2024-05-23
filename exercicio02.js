@@ -1309,13 +1309,73 @@ const prompt = require('prompt-sync')();
 // console.log(dateArray);
 
 /*Exercicio 43*/
+// const obj01 = {
+//     name: 'Fulano',
+//     age: 42
+// };
+
+// const obj2 = {
+//     name: 'Beltrano',
+//     cpf: 11223344
+// };
+
+// const unitObj = (obj1, obj2) => {
+//     const obejctUnit = {...obj2};
+//     for(const key in obj1){
+//         if(!(key in obejctUnit)){
+//             obejctUnit[key] = obj1[key];
+//         };
+//     };
+//     return obejctUnit;
+// };
+
+// const obj3 = unitObj(obj01, obj2);
+
+// console.log(obj3);
+
 /*Exercicio 44*/
+// const obj01 = {
+//     name: 'Fulano',
+//     age: 42,
+//     phone: '00 9999-2222',
+//     gender: 'M',
+//     cpf: 11223344,
+//     listGame: ['Final Fantasy', 'Dungeons & Dragons', 'Magic The Gathering']
+// }
+
+// const verifyStringInObject = (object) => {
+//     let count = 0;
+//     for(const key in object){
+//         if(typeof(object[key]) === 'string'){
+//             count++
+//         };
+//     };
+//     return count;
+// };
+
+// const stringNumber = verifyStringInObject(obj01);
+// console.log(`O numero de string dentro do objeto é ${stringNumber}`);
+
 /*Exercicio 45*/
+// const listFruts = ['uva', 'maça', 'abacaxi', 'tomate', 'limão', 'uva', 'abacate', 'abacaxi'];
+
+// const createObject = (list) => {
+//     const obj = {};
+
+//     list.forEach(element => {
+//         obj[element] = element in obj ? obj[element] += 1 : obj[element] = 1
+//     });
+
+//     return obj;
+// }
+
+// const objList = createObject(listFruts);
+// console.log(objList);
 
 /*Exercicio 46*/
-
 /*Exercicio 47*/
 /*Exercicio 48*/
+
 /*Exercicio 49*/
 
 /*Exercicio 50*/
