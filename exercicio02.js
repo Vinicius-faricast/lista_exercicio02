@@ -11,7 +11,7 @@ const prompt = require('prompt-sync')();
 //     const result = timeLostInDays >= 1 
 //     ? `Você perderá um total de ${timeLostInDays} ${timeLostInDays === 1 ? 'dia' : 'dias'}${textComplement}` 
 //     : `Você perderá um total de ${timeLostInHours} ${timeLostInHours <= 1 ? 'hora' : 'horas'}`
-    
+
 
 //     return result;
 // }
@@ -225,7 +225,7 @@ const prompt = require('prompt-sync')();
 // while (condition === "s") {
 //     const salary = parseInt(prompt(`Qual o salario do Funcionario: `));
 //     const gender = prompt(`Qual o sexo do funcionario [M/F]: `).toLowerCase();
-    
+
 //     calculateSalary(gender, salary);
 
 //     condition = prompt(`Deseja continuar [S/N]: `).toLowerCase();
@@ -286,7 +286,7 @@ const prompt = require('prompt-sync')();
 //     const nextNumber = prompt(`Deseja continuar [S/N]: `).toLowerCase();
 
 //     addNumber(number);
-   
+
 //     condition = nextNumber === 's' ? true : false;
 // }
 
@@ -326,7 +326,7 @@ const prompt = require('prompt-sync')();
 //         result = firstNumber + secondNumber;
 //         firstNumber = secondNumber;
 //         secondNumber = result;
-        
+
 //         console.log(result);
 
 //     };
@@ -340,7 +340,7 @@ const prompt = require('prompt-sync')();
 //     }else{
 //         listNumber.push(listNumber[listNumber.length -1] + listNumber[listNumber.length-2]);
 //     };
-    
+
 // };
 
 // console.log(listNumber);
@@ -396,7 +396,7 @@ const prompt = require('prompt-sync')();
 // const peopleAge = [];
 
 // const peopleUnderEigthteen = (listName, listAge) => {
-    
+
 //     listAge.forEach((age, index) => {
 //        if (age < 18) {
 //             console.log(`${listName[index]} tem ${age} anos`)
@@ -407,7 +407,7 @@ const prompt = require('prompt-sync')();
 // for (let index = 0; index < 9; index++) {
 //     const name = prompt(`Digite um nome: `);
 //     const age = parseInt(prompt(`Digite a idade: `));
-    
+
 //     peopleName.push(name);
 //     peopleAge.push(age);
 
@@ -446,7 +446,7 @@ const prompt = require('prompt-sync')();
 
 //     const conditionNumberInParts = !(parts[0].length !== 2 || parts[1].length !== 2 || parts[2].length !== 2);
 //     const conditionIsNumberInParts = (parseInt(parts[0])) || parseInt((parts[1])) || parseInt((parts[2]));
-    
+
 //     if(conditionNumberInParts && conditionIsNumberInParts) {
 //         return true;
 //     }
@@ -654,7 +654,7 @@ const prompt = require('prompt-sync')();
 // const createMi = () => {
 //     const mi = [];
 //     for(let i = 0; i < 15; i++){
-    
+
 //         const row = [];
 //         for (let j = 0; j < 20; j++) {
 //             const randomNumber = Number((Math.random()*10).toFixed(2));
@@ -694,7 +694,7 @@ const prompt = require('prompt-sync')();
 // const createMi = () => {
 //     const mi = [];
 //     for(let i = 0; i < 3; i++){
-    
+
 //         const row = [];
 //         for (let j = 0; j < 15; j++) {
 //             const randomNumber = Math.floor(Math.random()*10);
@@ -708,7 +708,7 @@ const prompt = require('prompt-sync')();
 // const multipleMatriz = (mA, mB) => {
 //     const mP = [];
 //     if ((mA.length === matrizB.length) && (mA[0].length === mB[0].length) ) {
-        
+
 //         mA.forEach((list, indexRow) => {
 //             const row = [];
 //             list.forEach((element, indexColunm) => {
@@ -720,7 +720,7 @@ const prompt = require('prompt-sync')();
 
 //     return mP;
 // }
-    
+
 // const matrizA = createMi();
 
 // const matrizB = createMi();
@@ -1098,17 +1098,17 @@ const prompt = require('prompt-sync')();
 // const createListBettors = () => {
 
 //     const bettors = [];
-    
+
 //     for (let index = 0; index < 100; index++) {
 //         const numberCard = parseInt(prompt("Digite o número do cartão: "));
 //         const responseCard = []
 //         for (let index = 0; index < 13; index++) {
 //             responseCard.push(parseInt(prompt(`Digite seu palpite numero ${index+1}: `)));
 //         }
-        
+
 //         bettors.push(createPunter(numberCard, responseCard))
 //     }
-    
+
 //     return bettors;
 // }
 
@@ -1373,8 +1373,90 @@ const prompt = require('prompt-sync')();
 // console.log(objList);
 
 /*Exercicio 46*/
+// const salesDate = [
+//     {
+//         seller: 'Fulano',
+//         saleValue: 300
+//     },
+//     {
+//         seller: 'Cicrano',
+//         saleValue: 200
+//     },
+//     {
+//         seller: 'Fulano',
+//         saleValue: 100
+//     },
+//     {
+//         seller: 'Beltrano',
+//         saleValue: 300
+//     },
+// ];
+
+// const salesAmount = (listSellers) => {
+//     const saleBySeller = {}
+//     listSellers.forEach(({seller, saleValue}) => {
+//         saleBySeller[seller] = seller in saleBySeller 
+//         ? saleBySeller[seller] + saleValue 
+//         : saleValue;
+//     });
+//     return saleBySeller;
+// };
+
+// const listSale = salesAmount(salesDate);
+// console.log(listSale);
+
 /*Exercicio 47*/
+// const user = {
+//     name: 'Fulano',
+//     phone: '222222',
+//     cpf: '1122334455'
+// };
+
+// const verifyIsString = (obj) => {
+//     const objChecked = {};
+//     for(const key in obj){
+//         if(typeof(obj[key]) === 'string' ){
+//             objChecked[key] = 'Valid';
+//         };
+//     };
+//     return objChecked;
+// };
+
+// const verification = (obj, callback) => {
+//     const newObj = callback(obj);
+//     return newObj;
+// };
+
+// const userChecked = verification(user, verifyIsString);
+// console.log(userChecked)
+
 /*Exercicio 48*/
+// const store01 = {
+//     rice: 2,
+//     bean: 4,
+//     oil: 6,
+//     flour: 1
+// };
+
+// const store02 = {
+//     oil: 2,
+//     tomato: 4,
+//     salt: 1,
+//     rice: 7
+// }
+
+// const totalStorage = (obj01, obj02) => {
+//     const storage = {...obj01};
+//     for (const key in obj02){
+//         storage[key] = key in storage 
+//         ? storage[key] + obj02[key] 
+//         : obj02[key]
+//     };
+//     return storage;
+// };
+
+// const storage = totalStorage(store01, store02);
+// console.log(storage);
 
 /*Exercicio 49*/
 
