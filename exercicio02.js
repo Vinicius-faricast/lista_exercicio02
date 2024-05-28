@@ -1459,5 +1459,58 @@ const prompt = require('prompt-sync')();
 // console.log(storage);
 
 /*Exercicio 49*/
+// const transaction = [
+//     {
+//         id: 1,
+//         value: 200,
+//         time: "12/04/2024",
+//         category: 'Deposito'
+//     },
+//     {
+//         id: 2,
+//         value: 100,
+//         time: "1/04/2024",
+//         category: 'Saque'
+//     },
+//     {
+//         id: 3,
+//         value: 2300,
+//         time: "30/04/2024",
+//         category: 'Emprestimo'
+//     },
+//     {
+//         id: 4,
+//         value: 100,
+//         time: "10/05/2024",
+//         category: 'Saque'
+//     },
+//     {
+//         id: 5,
+//         value: 1000,
+//         time: "30/05/2024",
+//         category: 'Deposito'
+//     },
+// ];
 
+// const listTransaction = (list) => {
+//     const totalTransaction = {};
+
+//     list.forEach(({ category, value }) => {
+
+//         if(category in totalTransaction){
+//             totalTransaction[category].push(value);
+//             totalTransaction[`${category}Total`] += value
+//         }else{
+//             totalTransaction[category] = []
+//             totalTransaction[category].push(value);
+//             totalTransaction[`${category}Total`] = value
+//         }
+//     });
+
+//     return totalTransaction;
+
+// }
+
+// const list = listTransaction(transaction);
+// console.log(list)
 /*Exercicio 50*/
