@@ -1528,25 +1528,27 @@
 //  nome Cliente.
 
 //  2. Funcionalidades:
-//  ○ Adicionarhotéis: Permitir que o usuário adicione novos hotéis ao sistema.
+//  1 - ○ Adicionarhotéis: Permitir que o usuário adicione novos hotéis ao sistema.
 
-//  ○ Buscar hotéis por cidade: Permitir que o usuário liste todos os hotéis
+//  2 - ○ Buscar hotéis por cidade: Permitir que o usuário liste todos os hotéis
 //  disponíveis em uma cidade específica.
 
-//  ○ Fazerreserva: Permitir que um usuário faça uma reserva em um hotel. Isso
+//  3 - ○ Fazer reserva: Permitir que um usuário faça uma reserva em um hotel. Isso
 //  deve diminuir o número de quartos disponiveis do hotel.
 
-//  ○ Cancelarreserva: Permitir que um usuário cancele uma reserva. Isso deve
+//  4 - ○ Cancelar reserva: Permitir que um usuário cancele uma reserva. Isso deve
 //  aumentar o númerodequartos disponiveis no hotel correspondente.
-//  ○ Listarreservas: Mostrar todas as reservas, incluindo detalhes do hotel e do
+
+//  5 - ○ Listar reservas: Mostrar todas as reservas, incluindo detalhes do hotel e do
 //  cliente.
 
-//  3. RegrasdeNegócio:
-//  ○ Umhotelsópodeaceitarreservas se houver quartos disponíveis.
-//  ○ Asreservasdevemseridentificadas por um ID único e associadas a um
+//  3. Regras de Negócio:
+//  ○ Um hotel só pode aceita rreservas se houver quartos disponíveis.
+//  ○ As reservas devem ser identificadas por um ID único e associadas a um
 //  único hotel.
+
 //  4. DesafiosAdicionais (Opcionais):
-//  ○ Implementarumafunçãodecheck-inecheck-out queatualize a
+//  ○ Implementar uma função decheck-in e check-out que atualize a
 //  disponibilidade de quartos.
 //  ○ Gerarrelatórios de ocupação para um hotel.
 //  ○ Permitir que ousuário avalie o hotel após a estadia, e armazenar essas
@@ -1554,10 +1556,32 @@
 
 
 const hoteisList = [];
+const reservationsList = [];
+
+const createReservations = (id, idHotel, nameClient) => {
+    return {id, idHotel, nameClient};
+}
 
 const createhotel = (id, name, city, totalRoons, roonsAvaliables) => {
     return {id, name, city, totalRoons, roonsAvaliables};
 };
+
+const registerReservations = () => {
+    //listar os hoteis com quartos diponiveis
+    hoteisList.forEach(({id, name, roonsAvaliables}) => {
+        if(roonsAvaliables > 0){
+            console.log(`
+            idHotel: ${id}
+            Hotel: ${name}
+            Quartos Disponiveis: ${roonsAvaliables}
+            `);
+        };
+    });
+    //pedir pro usuario o id do hotel desejado
+    //pedir o nome do usuario
+    //manipular o numero de quarto no hotel
+    //add a reserva a lista de reservas
+}
 
 const registerHotel = () => {
     const date = [];
@@ -1575,7 +1599,35 @@ const registerHotel = () => {
     hoteisList.push(hotel);
 }
 
-registerHotel()
+const objMenu = {
+    '1': registerHotel,
+    '2': 'Buscar hoteis por cidade',
+    '3': registerReservations,
+    '4': 'Cancelar reserva',
+    '5': 'Listar reservas'
+}
+
+const menu = () => {
+    let option = '0'
+    while(option !== "6"){
+
+        option = prompt(`Escolha um opção:
+        1 - Registrar Hotel
+        2 - Buscar hoteis por cidade
+        3 - Fazer reserva
+        4 - Cancelar reserva
+        5 - Listar reservas
+        6 - sair do sistema`);
+        
+        if(typeof(objMenu[option]) === 'function'){
+            objMenu[option]();
+        }
+    }
+
+}
+
+menu()
 console.log(hoteisList)
+// registerHotel()
 // let nomeUsuario = prompt("Qual é o seu nome?");
 // console.log(hotel01);
