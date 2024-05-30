@@ -1,4 +1,4 @@
-const prompt = require('prompt-sync')();
+// const prompt = require('prompt-sync')();
 /*Exercicio 01*/
 // const dayPerCigarette = CigarretteNumber => {
 //     const timeLostInMinutes = 10 * CigarretteNumber;
@@ -1513,4 +1513,69 @@ const prompt = require('prompt-sync')();
 
 // const list = listTransaction(transaction);
 // console.log(list)
+
 /*Exercicio 50*/
+// Desenvolva um pequeno sistema de reserva de hotéis usando JavaScript. O sistema
+//  deverá ser capaz de interagir com o usuário através do console do navegador e manter
+//  um registro das reservas e hotéis disponíveis. Utilize objetos e arrays para gerenciar as
+//  informações. Não é necessário interface gráfica, apenas funcionalidade lógica.
+//  1.
+//  EstruturadeDados:
+//  ○ Hotel:Cada hotel deve ser um objeto com propriedades para id, nome,
+//  cidade, quartos totais e quartos disponiveis.
+
+//  ○ Reservas:Cada reserva deve ser um objeto contendo id Reserva, id Hotel, e
+//  nome Cliente.
+
+//  2. Funcionalidades:
+//  ○ Adicionarhotéis: Permitir que o usuário adicione novos hotéis ao sistema.
+
+//  ○ Buscar hotéis por cidade: Permitir que o usuário liste todos os hotéis
+//  disponíveis em uma cidade específica.
+
+//  ○ Fazerreserva: Permitir que um usuário faça uma reserva em um hotel. Isso
+//  deve diminuir o número de quartos disponiveis do hotel.
+
+//  ○ Cancelarreserva: Permitir que um usuário cancele uma reserva. Isso deve
+//  aumentar o númerodequartos disponiveis no hotel correspondente.
+//  ○ Listarreservas: Mostrar todas as reservas, incluindo detalhes do hotel e do
+//  cliente.
+
+//  3. RegrasdeNegócio:
+//  ○ Umhotelsópodeaceitarreservas se houver quartos disponíveis.
+//  ○ Asreservasdevemseridentificadas por um ID único e associadas a um
+//  único hotel.
+//  4. DesafiosAdicionais (Opcionais):
+//  ○ Implementarumafunçãodecheck-inecheck-out queatualize a
+//  disponibilidade de quartos.
+//  ○ Gerarrelatórios de ocupação para um hotel.
+//  ○ Permitir que ousuário avalie o hotel após a estadia, e armazenar essas
+//  avaliações dentro do objeto do hotel
+
+
+const hoteisList = [];
+
+const createhotel = (id, name, city, totalRoons, roonsAvaliables) => {
+    return {id, name, city, totalRoons, roonsAvaliables};
+};
+
+const registerHotel = () => {
+    const date = [];
+    date.push(hoteisList.length + 1);
+    const listProperty = ['o nome do hotel', 'a cidade', 'o total de quartos', 'os quartos disponiveis']
+    for (let index = 0; index < 4; index++) {
+        let info = prompt(`Qual é ${listProperty[index]}?`);
+        if(!isNaN(info)){
+            info = Number(info);
+        }
+        date.push(info);
+    }
+    
+    const hotel = createhotel(...date);
+    hoteisList.push(hotel);
+}
+
+registerHotel()
+console.log(hoteisList)
+// let nomeUsuario = prompt("Qual é o seu nome?");
+// console.log(hotel01);
