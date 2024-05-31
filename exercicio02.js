@@ -1568,18 +1568,39 @@ const createhotel = (id, name, city, totalRoons, roonsAvaliables) => {
 
 const registerReservations = () => {
     //listar os hoteis com quartos diponiveis
-    hoteisList.forEach(({id, name, roonsAvaliables}) => {
+    hoteisList.forEach(({id, name, city, roonsAvaliables}) => {
         if(roonsAvaliables > 0){
             console.log(`
             idHotel: ${id}
             Hotel: ${name}
+            Cidade: ${city}
             Quartos Disponiveis: ${roonsAvaliables}
             `);
         };
     });
     //pedir pro usuario o id do hotel desejado
+    let idHotel = prompt(`id do hotel: `);
+    let hotel = []
+    if(!isNaN(idHotel)){
+        idHotel = Number(idHotel);
+
+        hotel = hoteisList.filter(hotel => hotel.id === idHotel);
+        if(hotel.length === 0){
+            console.log('id invalido, tente novamente');
+            return;
+        }
+
+    }else{
+        console.log('id invalido, tente novamente');
+    }
+
     //pedir o nome do usuario
+    const clientName = prompt(`Nome do cliente: `);
+
     //manipular o numero de quarto no hotel
+    const hotelAvaliables = hotel[0];
+    hotelAvaliables.roonsAvaliables = hotelAvaliables.roonsAvaliables - 2
+    console.log(hotelAvaliables);
     //add a reserva a lista de reservas
 }
 
@@ -1599,9 +1620,29 @@ const registerHotel = () => {
     hoteisList.push(hotel);
 }
 
+const searchHotelByCity = () => {
+    if(hoteisList.length !== 0){
+        const city = prompt('Digita a cidade que deseja pesquisar hoteis: ').toLowerCase();
+
+        hoteisList
+            .filter(hotel => hotel.city.toLowerCase() === city)
+            .forEach(({id, name, city, roonsAvaliables}) => {
+                console.log(`
+                idHotel: ${id}
+                Hotel: ${name}
+                Cidade: ${city}
+                Quartos Disponiveis: ${roonsAvaliables}
+                `)
+            });
+
+        return;
+    }
+    console.log('Não há hoteis cadastrados')
+}
+
 const objMenu = {
     '1': registerHotel,
-    '2': 'Buscar hoteis por cidade',
+    '2': searchHotelByCity,
     '3': registerReservations,
     '4': 'Cancelar reserva',
     '5': 'Listar reservas'
