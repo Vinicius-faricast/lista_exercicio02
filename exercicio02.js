@@ -1558,8 +1558,8 @@
 const hoteisList = [];
 const reservationsList = [];
 
-const createReservations = (id, idHotel, nameClient) => {
-    return {id, idHotel, nameClient};
+const createReservations = (id, idHotel, nameClient, numberRoonsReservations) => {
+    return {id, idHotel, nameClient, numberRoonsReservations};
 }
 
 const createhotel = (id, name, city, totalRoons, roonsAvaliables) => {
@@ -1567,20 +1567,28 @@ const createhotel = (id, name, city, totalRoons, roonsAvaliables) => {
 };
 
 const registerReservations = () => {
+
     //listar os hoteis com quartos diponiveis
-    hoteisList.forEach(({id, name, city, roonsAvaliables}) => {
-        if(roonsAvaliables > 0){
-            console.log(`
-            idHotel: ${id}
-            Hotel: ${name}
-            Cidade: ${city}
-            Quartos Disponiveis: ${roonsAvaliables}
-            `);
-        };
-    });
+    let hotel = hoteisList.filter(hotel => hotel.roonsAvaliables > 0)
+    if(hotel.length > 0){
+        hotel.forEach(({id, name, city, roonsAvaliables}) => {
+            if(roonsAvaliables > 0){
+                console.log(`
+                idHotel: ${id}
+                Hotel: ${name}
+                Cidade: ${city}
+                Quartos Disponiveis: ${roonsAvaliables}
+                `);
+            };
+        });
+    }else{
+        console.log('Não há hoteis com quartos disponiveis');
+        return
+    };
+
     //pedir pro usuario o id do hotel desejado
     let idHotel = prompt(`id do hotel: `);
-    let hotel = []
+    
     if(!isNaN(idHotel)){
         idHotel = Number(idHotel);
 
@@ -1592,6 +1600,7 @@ const registerReservations = () => {
 
     }else{
         console.log('id invalido, tente novamente');
+        return;
     }
 
     //pedir o nome do usuario
@@ -1599,9 +1608,23 @@ const registerReservations = () => {
 
     //manipular o numero de quarto no hotel
     const hotelAvaliables = hotel[0];
-    hotelAvaliables.roonsAvaliables = hotelAvaliables.roonsAvaliables - 2
-    console.log(hotelAvaliables);
+    let numberReservations = prompt(`
+    Número de quartos disponiveis ${hotelAvaliables.roonsAvaliables}.
+    Número de quartos que deseja reservar: 
+    `);
+
+    numberReservations = Number(numberReservations);
+
+    if(hotelAvaliables.roonsAvaliables < numberReservations){
+        console.log("Operação invalida");
+        return;
+    }
+
+    hotelAvaliables.roonsAvaliables = hotelAvaliables.roonsAvaliables - numberReservations
+
     //add a reserva a lista de reservas
+    const idResevations = reservationsList.length + 1;
+    reservationsList.push(createReservations( idResevations ,idHotel, clientName, numberReservations))
 }
 
 const registerHotel = () => {
@@ -1612,6 +1635,14 @@ const registerHotel = () => {
         let info = prompt(`Qual é ${listProperty[index]}?`);
         if(!isNaN(info)){
             info = Number(info);
+        }
+        if(index === listProperty.length -1){
+
+            while(date[3] < info){
+                console.log("número de quartos disponiveis invalido");
+                info = prompt(`Qual é ${listProperty[index]}?`);
+                info = Number(info);
+            }
         }
         date.push(info);
     }
@@ -1669,6 +1700,7 @@ const menu = () => {
 
 menu()
 console.log(hoteisList)
+console.log(reservationsList)
 // registerHotel()
 // let nomeUsuario = prompt("Qual é o seu nome?");
 // console.log(hotel01);
